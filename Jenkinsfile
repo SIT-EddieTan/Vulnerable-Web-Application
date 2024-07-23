@@ -22,7 +22,7 @@ pipeline
 
                     withSonarQubeEnv('SonarQube') 
                     {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://172.30.141.239:9000 -Dsonar.token=sqp_3f739f9d4036e983270f8efe1c2cbc87c25f21d0"
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://172.30.141.239:9000 -Dsonar.token=sqp_391899e639a3cd388703213f14dea621453f0d5e"
                     }
                 }
             }
