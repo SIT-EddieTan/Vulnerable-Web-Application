@@ -7,7 +7,7 @@ pipeline
         {
             steps 
             {
-                git branch: 'main', url: 'https://github.com/SIT-EddieTan/Vulnerable-Web-Application.git'
+                git branch: 'master', url: 'https://github.com/<your github>/Vulnerable-Web-Application.git'
             }
         }
         stage('Code Quality Check via SonarQube') 
@@ -22,7 +22,7 @@ pipeline
 
                     withSonarQubeEnv('SonarQube') 
                     {
-                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://172.30.141.239:9000 -Dsonar.token=sqp_367fd31c304b67429322487301fcc9e2957b726b"
+                        sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OWASP -Dsonar.sources=. -Dsonar.host.url=http://172.30.141.239:9000 -Dsonar.token=sqp_4eb2d89d9ef8e3af1a48b972dd013dcd33280fd3"
                     }
                 }
             }
@@ -34,3 +34,4 @@ pipeline
         }
     }
 }
+
